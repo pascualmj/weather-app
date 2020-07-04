@@ -1,0 +1,21 @@
+@import "../../assets/scss/variables";
+
+.weather-temp {
+  &.size-small {
+    font-size: $text-regular;
+  }
+
+  &.size-regular {
+    font-size: $text-title;
+  }
+
+  &.size-big {
+    font-size: 5.8rem;
+  }
+
+  @each $key, $value in $colors-map {
+    &.color-#{$key} {
+      color: $value;
+    }
+  }
+}
