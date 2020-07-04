@@ -1,6 +1,6 @@
 import React from "react";
 
-import ViewContainer from "./components/ViewContainer";
+import ViewContainer from "./components/commons/ViewContainer";
 import Home from "./views/Home";
 
 const App = () => {

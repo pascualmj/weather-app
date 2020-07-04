@@ -1,4 +1,4 @@
-@import "../../assets/scss/variables";
+@import "../../../assets/scss/variables";
 
 .text {
   @each $key, $value in $colors-map {
