@@ -1,0 +1,14 @@
+.weather-day {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > p {
+    flex: 0 0 12rem;
+  }
+
+  .weather-min-max {
+    flex: 0 0 8rem;
+    justify-content: flex-end;
+  }
+}
