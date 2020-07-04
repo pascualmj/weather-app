@@ -1,10 +1,15 @@
 import React from "react";
 
+import ViewContainer from "./components/ViewContainer";
+import Home from "./views/Home";
+
 const App = () => {
   return (
-    <div>
-      <h1>Ready to go!</h1>
-    </div>
+    <>
+      <ViewContainer>
+        <Home />
+      </ViewContainer>
+    </>
   );
 };
 
