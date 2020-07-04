@@ -26,4 +26,34 @@
       }
     }
   }
+
+  &.extended > div {
+    margin: 0;
+    height: 5rem;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-child {
+      background-color: $color-alternative;
+    }
+
+    &:last-child {
+      background-color: $color-primary;
+    }
+
+    p {
+      display: inline-block;
+      color: $color-absence;
+      font-size: $text-small;
+    }
+
+    .weather-temp {
+      color: $color-absence;
+      font-weight: $text-weight-regular;
+      font-size: $text-big;
+      margin-left: 0.8rem;
+    }
+  }
 }
