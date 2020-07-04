@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import List from "../commons/List";
 import Divider from "../commons/Divider";
@@ -21,9 +22,9 @@ const items = [
   },
 ];
 
-const WeatherForecast = () => {
+const WeatherForecast = ({ className = "" }) => {
   return (
-    <section>
+    <section className={className}>
       <List
         items={items}
         keyExtractor={(item) => item.day}
@@ -41,6 +42,10 @@ const WeatherForecast = () => {
       />
     </section>
   );
+};
+
+WeatherForecast.propTypes = {
+  className: PropTypes.string,
 };
 
 export default WeatherForecast;
