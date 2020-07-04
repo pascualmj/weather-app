@@ -1,0 +1,8 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  & > li {
+    margin-bottom: 2.2rem;
+  }
+}
