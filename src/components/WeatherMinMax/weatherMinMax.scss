@@ -1,0 +1,29 @@
+@import "../../assets/scss/variables";
+
+.weather-min-max {
+  display: flex;
+
+  & > div {
+    margin-left: 2rem;
+
+    p {
+      display: none;
+    }
+
+    &:first-child {
+      margin-left: 0;
+
+      span {
+        color: $color-alternative;
+        font-weight: $text-weight-bold;
+      }
+    }
+
+    &:last-child {
+      span {
+        color: $color-primary;
+        font-weight: $text-weight-bold;
+      }
+    }
+  }
+}
