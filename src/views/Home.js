@@ -1,10 +1,12 @@
 import React from "react";
 
+import CitySelection from "../components/CitySelection";
+
 const Home = () => {
   return (
-    <div>
-      <p>From Home Component!</p>
-    </div>
+    <>
+      <CitySelection />
+    </>
   );
 };
 
