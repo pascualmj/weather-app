@@ -27,7 +27,7 @@ const WeatherDay = ({
 
 WeatherDay.propTypes = {
   day: PropTypes.string.isRequired,
-  iconId: PropTypes.string.isRequired,
+  iconId: PropTypes.number.isRequired,
   min: PropTypes.number.isRequired,
   max: PropTypes.number.isRequired,
   description: PropTypes.string,
