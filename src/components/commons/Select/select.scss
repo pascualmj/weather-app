@@ -1,0 +1,64 @@
+@import "../../../assets/scss/variables";
+
+.select {
+  height: 5rem;
+  border: 0.2rem solid $color-full;
+  position: relative;
+  cursor: pointer;
+
+  .option-selected {
+    height: 4.6rem;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      flex: 1 1 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .material-icons {
+      flex: 0 0 auto;
+      font-size: $text-subtitle;
+      margin-left: 2rem;
+    }
+  }
+
+  ul.options {
+    height: auto;
+    max-height: 27.8rem;
+    overflow-y: auto;
+    position: absolute;
+    left: -0.2rem;
+    right: -0.2rem;
+    top: 4.6rem;
+    border: 2px solid $color-full;
+    border-top: none;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    li {
+      height: 4.6rem;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      background-color: $color-lighter;
+      color: $color-secondary;
+
+      &:hover {
+        color: $color-full;
+      }
+
+      &.selected {
+        background-color: $color-absence;
+        color: $color-full;
+      }
+    }
+  }
+}
