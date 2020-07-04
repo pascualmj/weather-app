@@ -6,12 +6,14 @@ const Text = ({
   size = "regular",
   color = "full",
   weight = "regular",
+  uppercase = false,
   children,
   className = "",
 }) => {
   return (
     <p
       className={`text color-${color} size-${size} weight-${weight} ${className}`}
+      {...(uppercase && { style: { textTransform: "uppercase" } })}
     >
       {children}
     </p>
@@ -37,6 +39,7 @@ Text.propTypes = {
     "title",
   ]),
   weight: PropTypes.oneOf(["regular", "bold"]),
+  uppercase: PropTypes.bool,
   className: PropTypes.string,
 };
 
