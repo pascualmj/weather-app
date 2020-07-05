@@ -3,22 +3,32 @@ export const SELECT_OPTIONS_CITIES = [
   {
     label: "Rosario",
     value: "Rosario, Santa Fe, Argentina",
+    lat: -32.9595,
+    lon: -60.661541,
   },
   {
     label: "Córdoba",
-    value: "Ciudad de Córdoba, Córdoba, Argentina",
+    value: "Córdoba, Córdoba, Argentina",
+    lat: -31.417339,
+    lon: -64.183319,
   },
   {
     label: "Paraná",
     value: "Paraná, Entre Ríos, Argentina",
+    lat: -31.742668,
+    lon: -60.517937,
   },
   {
     label: "Mendoza",
     value: "Mendoza, Mendoza, Argentina",
+    lat: -34.599216,
+    lon: -68.606415,
   },
   {
     label: "Misiones",
-    value: "Ciudad de Misiones, Misiones, Argentina",
+    value: "Misiones, Misiones, Argentina",
+    lat: -26.737224,
+    lon: -54.431526,
   },
 ];
 
