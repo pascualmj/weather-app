@@ -3,6 +3,7 @@ import React from "react";
 import CitySelection from "../components/CitySelection";
 import WeatherToday from "../components/WeatherToday";
 import WeatherForecast from "../components/WeatherForecast";
+import Preloader from "../components/Preloader";
 
 import { useGlobalStore } from "../hooks";
 
@@ -13,7 +14,7 @@ const Home = () => {
     <>
       <CitySelection />
       {isLoading ? (
-        <p className="mt-6">Loading...</p>
+        <Preloader text="Checking the weather..." className="mt-6" />
       ) : (
         <>
           <WeatherToday className="mt-6" />
