@@ -7,7 +7,12 @@ import { useGlobalStore } from "../../hooks";
 import { SELECT_OPTIONS_CITIES } from "../../config/constants";
 
 const CitySelection = () => {
-  const { selectedCity, changeSelectedCity } = useGlobalStore();
+  const {
+    selectedCity,
+    changeSelectedCity,
+    isLoading,
+    error,
+  } = useGlobalStore();
 
   const handleChange = (value) => {
     changeSelectedCity(value);
@@ -22,6 +27,7 @@ const CitySelection = () => {
         options={SELECT_OPTIONS_CITIES}
         value={selectedCity}
         onChange={handleChange}
+        disabled={isLoading || error}
       />
     </section>
   );
