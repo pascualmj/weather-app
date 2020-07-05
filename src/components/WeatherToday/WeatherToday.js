@@ -8,9 +8,10 @@ import WeatherMinMax from "../WeatherMinMax";
 
 import { getWeekDay } from "../../functions";
 import { useGlobalStore } from "../../hooks";
+import { SELECT_OPTIONS_CITIES } from "../../config/constants";
 
 const WeatherToday = ({ className = "" }) => {
-  const { location, weather } = useGlobalStore();
+  const { location, weather, selectedCity } = useGlobalStore();
 
   if (!weather || !location) return null;
 
@@ -26,7 +27,10 @@ const WeatherToday = ({ className = "" }) => {
         {getWeekDay(weather.current.dt)}
       </Text>
       <Text weight="bold" size="subtitle">
-        {location.city}
+        {selectedCity === SELECT_OPTIONS_CITIES[0].value
+          ? location.city
+          : SELECT_OPTIONS_CITIES.find((city) => city.value === selectedCity)
+              .label}
       </Text>
       <Text color="secondary" size="big" className="mb-1">
         {weather.current.weather[0].description}
