@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Select from "../commons/Select";
 import Text from "../commons/Text";
 
+import { useGlobalStore } from "../../hooks";
 import { SELECT_OPTIONS_CITIES } from "../../config/constants";
 
 const CitySelection = () => {
-  const [selectedOption, setSelectedOption] = useState("current");
+  const { selectedCity, changeSelectedCity } = useGlobalStore();
 
   const handleChange = (value) => {
-    setSelectedOption(value);
+    changeSelectedCity(value);
   };
 
   return (
@@ -19,7 +20,7 @@ const CitySelection = () => {
       </Text>
       <Select
         options={SELECT_OPTIONS_CITIES}
-        value={selectedOption}
+        value={selectedCity}
         onChange={handleChange}
       />
     </section>
