@@ -6,6 +6,11 @@
   position: relative;
   cursor: pointer;
 
+  &.disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
   .option-selected {
     height: 4.6rem;
     padding: 0 1.5rem;

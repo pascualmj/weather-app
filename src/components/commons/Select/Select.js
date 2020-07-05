@@ -6,7 +6,7 @@ import Text from "../Text";
 
 import { useOutsideListener } from "../../../hooks";
 
-const Select = ({ options, value, onChange }) => {
+const Select = ({ options, value, onChange, disabled = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const wrapperElement = useRef(null);
   useOutsideListener(wrapperElement, handleClose);
@@ -27,7 +27,10 @@ const Select = ({ options, value, onChange }) => {
   };
 
   return (
-    <div className="select" ref={wrapperElement}>
+    <div
+      className={`select ${disabled ? "disabled" : ""}`}
+      ref={wrapperElement}
+    >
       <div className="option-selected" onClick={handleToggle}>
         <Text>{options.find((opt) => opt.value === value).label}</Text>
         <span className="material-icons">unfold_more</span>
@@ -51,6 +54,7 @@ Select.propTypes = {
   options: PropTypes.array.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
 };
 
 export default Select;
