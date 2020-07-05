@@ -1,5 +1,5 @@
 export const SELECT_OPTIONS_CITIES = [
-  { label: "Current Location", value: "current" },
+  { label: "Current Location", value: "current" }, // Default current location must be on the top
   {
     label: "Rosario",
     value: "Rosario, Santa Fe, Argentina",
