@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: process.env.REACT_APP_GEOLOCATION_API,
+  baseURL: "http://ip-api.com/json",
   withCredentials: false,
   headers: {
     Accept: "application/json",
