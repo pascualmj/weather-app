@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "https://api.openweathermap.org/data/2.5",
+  baseURL: "http://localhost:8080/v1/forecast",
   withCredentials: false,
   headers: {
     Accept: "application/json",
@@ -9,8 +9,7 @@ const apiClient = axios.create({
   },
 });
 
-export const getWeather = (lat, lon) => {
-  return apiClient.get(
-    `/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&units=metric&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`
-  );
+export const getWeather = (city = null) => {
+  if (!city) return apiClient.get("/");
+  return apiClient.get(`/${city}`);
 };

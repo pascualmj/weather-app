@@ -20,10 +20,7 @@ const GlobalStore = ({ children }) => {
       setIsLoading(true);
       try {
         const { data: locationData } = await getLocation();
-        const { data: weatherData } = await getWeather(
-          locationData.lat,
-          locationData.lon
-        );
+        const { data: weatherData } = await getWeather();
         setLocation(locationData);
         setWeather(weatherData);
       } catch (error) {
@@ -34,23 +31,20 @@ const GlobalStore = ({ children }) => {
     getCurrentLocation();
   }, []);
 
-  const getCityWeather = useCallback(
-    async (value) => {
-      setIsLoading(true);
-      try {
-        let latLon = { lat: location.lat, lon: location.lon };
-        if (value !== SELECT_OPTIONS_CITIES[0].value) {
-          latLon = SELECT_OPTIONS_CITIES.find((city) => city.value === value);
-        }
-        const { data: weatherData } = await getWeather(latLon.lat, latLon.lon);
-        setWeather(weatherData);
-      } catch (error) {
-        setError(true);
+  const getCityWeather = useCallback(async (value) => {
+    setIsLoading(true);
+    try {
+      let city;
+      if (value !== SELECT_OPTIONS_CITIES[0].value) {
+        city = SELECT_OPTIONS_CITIES.find((city) => city.value === value);
       }
-      setIsLoading(false);
-    },
-    [location]
-  );
+      const { data: weatherData } = await getWeather(city ? city.label : null);
+      setWeather(weatherData);
+    } catch (error) {
+      setError(true);
+    }
+    setIsLoading(false);
+  }, []);
 
   const changeSelectedCity = useCallback(
     (value) => {
