@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Select Should match snapshot. 1`] = `
+<DocumentFragment>
+  <div
+    class="select "
+  >
+    <div
+      class="option-selected"
+    >
+      <p
+        class="text color-full size-regular weight-regular "
+      >
+        a
+      </p>
+      <span
+        class="material-icons"
+      >
+        unfold_more
+      </span>
+    </div>
+    <ul
+      class="options "
+    >
+      <li
+        class="selected"
+      >
+        a
+      </li>
+      <li
+        class=""
+      >
+        b
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
