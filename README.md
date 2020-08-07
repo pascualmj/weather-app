@@ -18,6 +18,10 @@ En la rama **use-openweather-api** se utilizó el nuevo servicio de One Call API
 
 Corre la aplicación en modo desarrollo. Abra [http://localhost:3000/](http://localhost:3000) para visitarla.
 
+### `npm test`
+
+Corre el test runner en watch mode.
+
 ### `npm run build`
 
 Construye la aplicación para producción dentro de la carpeta `build`.
