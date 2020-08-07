@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Alert Should match snapshot. 1`] = `
+<DocumentFragment>
+  <div
+    class="alert success "
+  >
+    <p
+      class="text color-absence size-small weight-regular "
+    >
+      a
+    </p>
+  </div>
+</DocumentFragment>
+`;
