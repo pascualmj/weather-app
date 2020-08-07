@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: List Should match snapshot. 1`] = `
+<DocumentFragment>
+  <ul
+    class="list"
+  >
+    <li>
+      a
+    </li>
+    <li>
+      b
+    </li>
+    <li>
+      c
+    </li>
+  </ul>
+</DocumentFragment>
+`;
